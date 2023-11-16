@@ -26,6 +26,10 @@
    "value": "MSS5004W Firmware Upgrader"
   },
   {
+   "optionDest": "contents_directory",
+   "value": "content"
+  },
+  {
    "optionDest": "clean_build",
    "value": false
   },
@@ -67,10 +71,6 @@
   },
   {
    "optionDest": "datas",
-   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/firmware;."
-  },
-  {
-   "optionDest": "datas",
    "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FU.ico;."
   },
   {
@@ -80,6 +80,10 @@
   {
    "optionDest": "datas",
    "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/README.md;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/new-firmware.bin;."
   }
  ],
  "nonPyinstallerOptions": {

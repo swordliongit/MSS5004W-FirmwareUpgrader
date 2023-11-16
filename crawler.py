@@ -23,7 +23,7 @@ DEBUG = True
 TIMEOUT = 20
 CURRENT_MAC = ""
 current_dir = os.path.dirname(__file__)
-IMAGE_LOCATION = os.path.join(current_dir, "firmware")
+IMAGE_LOCATION = os.path.join(current_dir, "new-firmware.bin")
 mac_list = []
 
 config = ConfigParser()
@@ -52,32 +52,18 @@ def crawl(Console, driver):
     global CURRENT_MAC
     global IMAGE_LOCATION
     try:
-        WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.LINK_TEXT, "LAN Information"))
-        ).click()
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "LAN Information"))).click()
         sleep(3)
-        CURRENT_MAC = (
-            WebDriverWait(driver, 10)
-            .until(EC.presence_of_element_located((By.CSS_SELECTOR, "#ra0-ifc-mac")))
-            .text
-        )
+        CURRENT_MAC = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#ra0-ifc-mac"))).text
         if CURRENT_MAC in mac_list:
             raise Exception("Upgrade aborted: Duplicate modem found!")
         else:
             mac_list.append(CURRENT_MAC)
         WriteToConsole(Console, f"Login: {CURRENT_MAC}\n")
-        WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.LINK_TEXT, "System"))
-        ).click()
-        WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.LINK_TEXT, "Backup / Flash Firmware"))
-        ).click()
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "#keep"))
-        ).click()
-        image_button = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "#image"))
-        )
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "System"))).click()
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Backup / Flash Firmware"))).click()
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#keep"))).click()
+        image_button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#image")))
         image_button.send_keys(IMAGE_LOCATION)
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(
@@ -113,9 +99,7 @@ def logged_out(Console, driver):
 
 def get_device_mac():
     try:
-        arp_output = subprocess.check_output(
-            "arp -a", shell=True, universal_newlines=True
-        )
+        arp_output = subprocess.check_output("arp -a", shell=True, universal_newlines=True)
         lines = arp_output.strip().split("\n")
         for line in lines:
             parts = line.strip().split()
@@ -161,16 +145,12 @@ def initiate(Console, driver, button, modem_count):
             if not logged_out(Console, driver):
                 crawl_successful, excpt, excpt_msg = crawl(Console, driver)
                 if crawl_successful:
-                    WriteToConsole(
-                        Console, f"Firmware Upgrade Successful for: {CURRENT_MAC}\n"
-                    )
+                    WriteToConsole(Console, f"Firmware Upgrade Successful for: {CURRENT_MAC}\n")
                     upgraded_count += 1
                     if upgraded_count == modem_count:
                         break
                 else:
-                    WriteToConsole(
-                        Console, f"<< Firmware Upgrade Failed for: {CURRENT_MAC} >>\n"
-                    )
+                    WriteToConsole(Console, f"<< Firmware Upgrade Failed for: {CURRENT_MAC} >>\n")
                     WriteToConsole(Console, f"Error type: {excpt}\n")
                     WriteToConsole(Console, f"Error msg: {excpt_msg}\n")
                     upgraded_count += 1
@@ -182,9 +162,7 @@ def initiate(Console, driver, button, modem_count):
             break
         WriteToConsole(Console, "Waiting for the next modem input...\n\n")
         sleep(70)
-    WriteToConsole(
-        Console, f"\n\n******Upgraded Modem Count: {upgraded_count}******\n\n"
-    )
+    WriteToConsole(Console, f"\n\n******Upgraded Modem Count: {upgraded_count}******\n\n")
     button.configure(state="normal")
     mac_list.clear()
     driver.close()
