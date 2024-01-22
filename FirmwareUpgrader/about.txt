@@ -1,0 +1,34 @@
+---------------------------------------------------------------------------
+      Firmware Upgrader v1.2.0 Hakkında      
+---------------------------------------------------------------------------
+
+Kullanım: 
+1 - PC'de internet olduğundan emin olun. Wifi ile internete bağlanabilirsiniz ancak bağlandığınız ağın 192.168.1.x ile aynı olmadığından emin olun.
+2 - PC'ye LAN kablosu takın ve LAN kablosunu herhangi bir dummy switche takın.
+3 - PC'de Ethernet ayarlarından IP'yi 192.168.1.x şeklinde değiştirerek 1'li network'e taşıyın. Örnek: 192.168.1.88
+4 - Modemleri switche LAN1 girişinden bağlayın.
+5 - Herhangi bir browser ile 192.168.1.1 adresine giriş yapmayı deneyin. Modemin arayüz girişinin karşınıza geldiğinden emin olun.
+6 - Modem sayısını giriş yapın ve Modemleri Güncelle butonuna basın.
+7 - Konsol ekranından logları okuyarak işlemi takip edebilirsiniz.
+8 - Güncellenen modemlerin MAC adresleri sağdaki panelde görünecektir.
+
+
+Version: 1.2.0
+Release Date: December 14, 2023
+
+**Credits:**
+- Developer: Kılıçarslan SIMSIKI
+- UI/UX Design: Kılıçarslan SIMSIKI
+
+**Contact and Support:**
+For any inquiries, feedback, or technical support,\n please contact our dedicated support team at https://swordlion.org
+
+**Legal Information:**
+Firmware Upgrader is a trademark of swordlion.org Corporation. All rights reserved.
+This software is protected by international copyright laws.
+Unauthorized reproduction or distribution of this software is prohibited.
+
+**Privacy Policy:**
+Read our privacy policy at https://swordlion.org for\n information on how we handle your data and protect your privacy.
+
+Thank you for choosing us.

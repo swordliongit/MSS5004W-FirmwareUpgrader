@@ -1,0 +1,105 @@
+{
+ "version": "auto-py-to-exe-configuration_v1",
+ "pyinstallerOptions": [
+  {
+   "optionDest": "noconfirm",
+   "value": true
+  },
+  {
+   "optionDest": "filenames",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/main.py"
+  },
+  {
+   "optionDest": "onefile",
+   "value": false
+  },
+  {
+   "optionDest": "console",
+   "value": false
+  },
+  {
+   "optionDest": "icon_file",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/FU.ico"
+  },
+  {
+   "optionDest": "name",
+   "value": "FirmwareUpgrader"
+  },
+  {
+   "optionDest": "contents_directory",
+   "value": "content"
+  },
+  {
+   "optionDest": "clean_build",
+   "value": false
+  },
+  {
+   "optionDest": "strip",
+   "value": false
+  },
+  {
+   "optionDest": "noupx",
+   "value": false
+  },
+  {
+   "optionDest": "disable_windowed_traceback",
+   "value": false
+  },
+  {
+   "optionDest": "uac_admin",
+   "value": false
+  },
+  {
+   "optionDest": "uac_uiaccess",
+   "value": false
+  },
+  {
+   "optionDest": "argv_emulation",
+   "value": false
+  },
+  {
+   "optionDest": "bootloader_ignore_signals",
+   "value": false
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/.venv/Lib/site-packages/customtkinter;customtkinter/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/.env;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/.version;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/about.txt;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/config.ini;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/FU.ico;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/LICENSE;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/new-firmware.bin;."
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Workspace/Programming/Python/MSS5004W-FirmwareUpgrader/FirmwareUpgrader/custom_theme.json;."
+  }
+ ],
+ "nonPyinstallerOptions": {
+  "increaseRecursionLimit": true,
+  "manualArguments": ""
+ }
+}
