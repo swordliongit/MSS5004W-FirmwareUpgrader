@@ -21,14 +21,14 @@ Release Date: December 14, 2023
 - UI/UX Design: Kılıçarslan SIMSIKI
 
 **Contact and Support:**
-For any inquiries, feedback, or technical support,\n please contact our dedicated support team at https://swordlion.org
+For any inquiries, feedback, or technical support,\n please contact our dedicated support team at https://www.artinsystems.com
 
 **Legal Information:**
-Firmware Upgrader is a trademark of swordlion.org Corporation. All rights reserved.
+Firmware Upgrader is a trademark of ARTINSYSTEMS. All rights reserved.
 This software is protected by international copyright laws.
 Unauthorized reproduction or distribution of this software is prohibited.
 
 **Privacy Policy:**
-Read our privacy policy at https://swordlion.org for\n information on how we handle your data and protect your privacy.
+Read our privacy policy at https://www.artinsystems.com for\n information on how we handle your data and protect your privacy.
 
 Thank you for choosing us.
